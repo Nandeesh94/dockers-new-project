@@ -1,28 +1,28 @@
 version: '3.8'
 services:
   movies:
-    image: movies:v1
+    image: nandeesh901/movies:latest
     ports:
       - 81:80
     deploy:
       replicas: 3
 
   train:
-    image: train:v1
+    image: nandeesh901/train:latest
     ports:
       - 82:80
     deploy:
       replicas: 3
 
   dth:
-    image: dth:v1
+    image: nandeesh901/dth:latest
     ports:
       - 83:80
     deploy:
       replicas: 3
 
   recharge:
-    image: recharge:v1
+    image: nandeesh901/recharge:latest
     ports:
       - 84:80
     deploy:
