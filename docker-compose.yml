@@ -1,20 +1,29 @@
 version: '3.8'
 services:
   movies:
-    image: nandu90199/paymovies:latest
+    image: movies:v1
     ports:
-      - "81:80"
+      - 81:80
     deploy:
       replicas: 3
-      
+
   train:
-    image: nandu90199/paytrain:latest
+    image: train:v1
     ports:
-      - "82:80"  
+      - 82:80
     deploy:
       replicas: 3
-      
+
   dth:
-    image: nandu90199/paydth:latest
+    image: dth:v1
     ports:
-      - "83:80"  
+      - 83:80
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: recharge:v1
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3
